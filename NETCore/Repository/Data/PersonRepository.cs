@@ -151,7 +151,5 @@ namespace NETCore.Repository.Data
             }
             return false;
         }
-
-
     }
 }

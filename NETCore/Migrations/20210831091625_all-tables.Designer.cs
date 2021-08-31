@@ -10,8 +10,8 @@ using NETCore.Context;
 namespace NETCore.Migrations
 {
     [DbContext(typeof(MyContext))]
-    [Migration("20210830084117_first migration")]
-    partial class firstmigration
+    [Migration("20210831091625_all-tables")]
+    partial class alltables
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -32,7 +32,7 @@ namespace NETCore.Migrations
 
                     b.HasKey("NIK");
 
-                    b.ToTable("Accounts");
+                    b.ToTable("tb_m_accounts");
                 });
 
             modelBuilder.Entity("NETCore.Models.Education", b =>
@@ -57,7 +57,7 @@ namespace NETCore.Migrations
 
                     b.HasIndex("UniversityId");
 
-                    b.ToTable("Educations");
+                    b.ToTable("tb_m_educations");
                 });
 
             modelBuilder.Entity("NETCore.Models.Person", b =>
@@ -91,7 +91,7 @@ namespace NETCore.Migrations
 
                     b.HasKey("NIK");
 
-                    b.ToTable("Persons");
+                    b.ToTable("tb_m_persons");
                 });
 
             modelBuilder.Entity("NETCore.Models.Profiling", b =>
@@ -106,7 +106,7 @@ namespace NETCore.Migrations
 
                     b.HasIndex("EducationId");
 
-                    b.ToTable("Profilings");
+                    b.ToTable("tb_m_profilings");
                 });
 
             modelBuilder.Entity("NETCore.Models.University", b =>
@@ -122,7 +122,7 @@ namespace NETCore.Migrations
 
                     b.HasKey("UniversityId");
 
-                    b.ToTable("Universities");
+                    b.ToTable("tb_m_universities");
                 });
 
             modelBuilder.Entity("NETCore.Models.Account", b =>
